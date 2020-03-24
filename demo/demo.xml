@@ -1,0 +1,24 @@
+<odoo>
+    <data>
+        <record model="workshop.vehicle" id="vehicle0">
+            <field name="name">BMW</field>
+            <field name="model">116d</field>
+            <field name="numberplate">6224HCL</field>
+            <field name="registration_date">11/09/2011</field>
+            <field name="electric">False</field>
+        </record>
+        <record model="workshop.vehicle" id="vehicle1">
+            <field name="name">Tesla</field>
+            <field name="model">Model 3</field>
+            <field name="numberplate">6889KLI</field>
+            <field name="registration_date">15/02/2018</field>
+            <field name="electric">True</field>
+        </record>
+        <record model="workshop.vehicle" id="vehicle2">
+            <field name="name">BMW</field>
+            <field name="model">M3 CSL</field>
+            <field name="numberplate">6472CLY</field>
+            <field name="registration_date">30/04/2001</field>
+        </record>
+    </data>
+</odoo>

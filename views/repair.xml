@@ -1,0 +1,62 @@
+<odoo>
+    <data>
+
+        <record model="ir.actions.act_window" id="repair_action">
+            <field name="name">Repairs</field>
+            <field name="res_model">workshop.repair</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">There aren't repairs.</p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_tree_repair">
+            <field name="name">repair.tree</field>
+            <field name="model">workshop.repair</field>
+            <field name="arch" type="xml">
+                <tree string="Repair list">
+                    <field name="name"/>
+                    <field name="failure"/>
+                    <field name="paid"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_form_repair">
+            <field name="name">repair.form</field>
+            <field name="model">workshop.repair</field>
+            <field name="arch" type="xml">
+                <form string="Repair form">
+                    <sheet>
+                        <group>
+                            <group col="4" colspan="2">
+                                <field name="name"/>
+                                <field name="vehicle"/>
+                                <field name="failure"/>
+                                <field name="repair_date" readonly="1"/>
+                            </group>
+                            <separator string="Costes reparación" colspan="2"/>
+                            <group colspan="1">
+                                <field name="time_required"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="view_search_repair">
+            <field name="name">repair.search</field>
+            <field name="model">workshop.repair</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="vehicle"/>
+                    <field name="repair_date"/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</odoo>

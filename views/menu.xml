@@ -1,0 +1,8 @@
+<odoo>
+    <data>
+        <menuitem id="main_menu_workshop" name="The Workshop of the Hood"/>
+        <menuitem id="menu_vehicle" name="Vehicles" parent="main_menu_workshop"/>
+        <menuitem id="menu_list_vehicle" name="Car list" parent="menu_vehicle" action="vehicles_action"/>
+        <menuitem id="menu_repair" name="Repairs" parent="menu_vehicle" action="repair_action"/>
+    </data>
+</odoo>

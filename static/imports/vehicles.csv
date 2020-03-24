@@ -1,0 +1,46 @@
+brand,model,numberplate,registration_date,electrict
+Aston Martin,DB9,9042KLP,15/08/2016,False
+BMW,116d,6224HCL,05/02/2011,False
+BMW,320d,4157CLY,11/08/2001,False
+BMW,325i,2513BKY,01/08/2015,False
+BMW,320d,9866DFG,18/12/2013,False
+BMW,M3 CSL,2508HKV,26/12/2011,False
+BMW,735i,1929BZS,05/08/2000,False
+BMW,340xd,5800KDT,27/06/2019,False
+BMW,118i,3877BTP,08/02/2000,False
+Tesla,Model 3,0224KCL,06/11/2017,True
+Tesla,CyberTuck,9989DDP,01/02/2019,True
+Tesla,Model 3,4115GMD,14/05/2019,True
+Tesla,Model X,0417FTN,08/05/2019,True
+Tesla,Model S,5366JHH,13/11/2018,True
+Tesla,Model X,0030KQV,22/02/2020,True
+Audi,A3,7488HCL,05/02/2011,False
+Audi,S3,4209CPM,13/04/2001,False
+Audi,RS6,2913BLY,20/08/2015,False
+Audi,Q5,9059DFG,18/09/2016,False
+Audi,Q5,3369KMM,26/09/2018,False
+Audi,A4,1129LZS,25/08/2019,False
+Audi,e-Tron,9654LLP,05/01/2020,True
+McLaren,720s,0420JNT,20/04/2019,False
+Mercedes-Benz,A200d,3877LPP,17/02/2018,False
+Mercedes-Benz,C63 AMG,3774KKL,06/11/2017,False
+Ferrari,LaFerrari,9002DZL,25/12/2016,False
+Opel,Astra,4115BCD,09/03/2000,False
+Opel,Astra,0017DLC,29/05/2004,False
+Opel,Zafiro,4636LJL,08/01/2020,False
+Opel,Corsa-e,0982LYK,08/02/2020,True
+Opel,Corsa-e,0498FLN,08/12/2019,True
+Citroën,C3,0001JHH,20/11/2018,False
+Citroën,Picasso,6337BBP,10/11/2000,False
+Citroën,C4,5006DVH,13/11/2018,False
+Volkswagen,Golf GTI,8525LQV,22/09/2019,False
+Volkswagen,Golf,6930KQV,16/02/2020,False
+Volkswagen,e-Golf,0800LPL,22/10/2019,True
+Volkswagen,Passat,6566CLY,03/02/2020,False
+Volkswagen,Golf,7848KJT,06/08/2016,False
+Volkswagen,Polo,3330PBV,30/04/2014,False
+Nissan,Skyline GTR R-34,3030LQV,27/09/2003,False
+Nissan,370z,9809PPV,22/06/2013,False
+CUPRA,Leon,9030YTV,22/02/2008,False
+Honda,i30N,4411KLL,26/10/2016,False
+Honda,e,5585LLP,26/01/2020,True
