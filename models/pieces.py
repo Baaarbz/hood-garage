@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 
 class Repair(models.Model):
-    _name = 'workshop.pieces'
+    _name = 'garage.pieces'
     _description = 'Pieces used to repair vehicles'
     _order = 'date desc'
 

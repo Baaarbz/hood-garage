@@ -1,3 +1,3 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-workshop_vehicle,workshop.vehicle,model_workshop_vehicle,base.group_user,1,1,1,1
-workshop_repair,workshop.repair,model_workshop_repair,base.group_user,1,1,1,1
+garage_vehicle,garage.vehicle,model_garage_vehicle,base.group_user,1,1,1,1
+garage_repair,garage.repair,model_garage_repair,base.group_user,1,1,1,1

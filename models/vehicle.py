@@ -6,11 +6,11 @@ from odoo.exceptions import ValidationError
 
 
 class Vehicle(models.Model):
-    _name = 'workshop.vehicle'
+    _name = 'garage.vehicle'
     _description = 'Registered vehicles'
     _order = 'brand asc, model desc'
     _sql_constraints = [
-        ('unique_numberplate', 'unique(numberplate)', 'Ya existe un vehículo con la matrícula registrada.')]
+        ('unique_numberplate', 'unique(numberplate)', 'There are a car with that numberplate.')]
 
     name = fields.Char(string='Car', compute='_car_id', store=True)
     brand = fields.Selection(
@@ -31,7 +31,7 @@ class Vehicle(models.Model):
     picture = fields.Binary(string='Car picture')
     electric = fields.Boolean(string='Electric', default=False)
 
-    repairs = fields.One2many('workshop.repair', 'vehicle')
+    repairs = fields.One2many('garage.repair', 'vehicle')
 
     @api.constrains('numberplate')
     def _constrain_registration(self):

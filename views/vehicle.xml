@@ -3,7 +3,7 @@
 
         <record model="ir.actions.act_window" id="vehicles_action">
             <field name="name">Registered cars</field>
-            <field name="res_model">workshop.vehicle</field>
+            <field name="res_model">garage.vehicle</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
@@ -13,7 +13,7 @@
 
         <record model="ir.ui.view" id="view_tree_vehicles">
             <field name="name">vehicle.tree</field>
-            <field name="model">workshop.vehicle</field>
+            <field name="model">garage.vehicle</field>
             <field name="arch" type="xml">
                 <tree string="List of registered cars">
                     <field name="brand"/>
@@ -25,7 +25,7 @@
 
         <record model="ir.ui.view" id="view_form_vehicles">
             <field name="name">vehicle.form</field>
-            <field name="model">workshop.vehicle</field>
+            <field name="model">garage.vehicle</field>
             <field name="arch" type="xml">
                 <form string="Car form">
                     <sheet>
@@ -60,7 +60,7 @@
 
         <record model="ir.ui.view" id="view_search_vehicle">
             <field name="name">vehicle.search</field>
-            <field name="model">workshop.vehicle</field>
+            <field name="model">garage.vehicle</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="brand"/>
@@ -72,7 +72,7 @@
 
         <record model="ir.filters" id="filter_electric">
             <field name="name">Grouped by electrics</field>
-            <field name="model_id">workshop.vehicle</field>
+            <field name="model_id">garage.vehicle</field>
             <field name="context">{'group_by': ['electric']}</field>
             <field name="is_default">true</field>
             <field name="active">true</field>

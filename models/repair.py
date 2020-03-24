@@ -4,7 +4,7 @@ from odoo import models, fields, api
 
 
 class Repair(models.Model):
-    _name = 'workshop.repair'
+    _name = 'garage.repair'
     _description = 'History repairs'
     _order = 'repair_date asc'
 
@@ -14,11 +14,11 @@ class Repair(models.Model):
                                    help='Time required to repair de vehicle in minutes', required=True)
     workforce_price = fields.Float(string='Price workforce (€/h)', digits=(5, 2), default=37.5, required=True)
     total_price = fields.Float(string='Total (€)', digits=(10, 2), compute='_total_price', store=True)
-    vehicle = fields.Many2one('workshop.vehicle', 'vehicle')
+    vehicle = fields.Many2one('garage.vehicle', 'vehicle')
     failure = fields.Text(string='Failure', required=True)
     paid = fields.Boolean(string="Paid", default=False)
 
-    pieces = fields.One2many('workshop.pieces')
+    pieces = fields.One2many('garage.pieces')
 
     @api.depends('repair_date', 'vehicle')
     def _repair_id(self):

@@ -3,7 +3,7 @@
 
         <record model="ir.actions.act_window" id="repair_action">
             <field name="name">Repairs</field>
-            <field name="res_model">workshop.repair</field>
+            <field name="res_model">garage.repair</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>
             <field name="help" type="html">
@@ -13,7 +13,7 @@
 
         <record model="ir.ui.view" id="view_tree_repair">
             <field name="name">repair.tree</field>
-            <field name="model">workshop.repair</field>
+            <field name="model">garage.repair</field>
             <field name="arch" type="xml">
                 <tree string="Repair list">
                     <field name="name"/>
@@ -25,7 +25,7 @@
 
         <record model="ir.ui.view" id="view_form_repair">
             <field name="name">repair.form</field>
-            <field name="model">workshop.repair</field>
+            <field name="model">garage.repair</field>
             <field name="arch" type="xml">
                 <form string="Repair form">
                     <sheet>
@@ -48,7 +48,7 @@
 
         <record model="ir.ui.view" id="view_search_repair">
             <field name="name">repair.search</field>
-            <field name="model">workshop.repair</field>
+            <field name="model">garage.repair</field>
             <field name="arch" type="xml">
                 <search>
                     <field name="name"/>
