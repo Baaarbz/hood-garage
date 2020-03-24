@@ -2,7 +2,7 @@
     <data>
 
         <record model="ir.actions.act_window" id="vehicles_action">
-            <field name="name">Registered cars</field>
+            <field name="name">Cars</field>
             <field name="res_model">garage.vehicle</field>
             <field name="view_type">form</field>
             <field name="view_mode">tree,form</field>

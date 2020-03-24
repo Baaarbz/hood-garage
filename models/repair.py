@@ -18,7 +18,7 @@ class Repair(models.Model):
     failure = fields.Text(string='Failure', required=True)
     paid = fields.Boolean(string="Paid", default=False)
 
-    pieces = fields.One2many('garage.pieces')
+    pieces = fields.One2many('garage.pieces', 'repair_code')
 
     @api.depends('repair_date', 'vehicle')
     def _repair_id(self):
@@ -32,4 +32,6 @@ class Repair(models.Model):
         for price in self:
             price.total_price = 0
             if price.workforce_price and price.time_required:
-
+                price.total_price = (price.time_required / 60) * price.workforce_price
+                for pieces in price.pieces:
+                    price.total_price = price.total_price + (pieces.unit * pieces.price)

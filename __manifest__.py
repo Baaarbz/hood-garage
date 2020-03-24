@@ -25,6 +25,7 @@
     'data': [
         'views/vehicle.xml',
         'views/repair.xml',
+        'views/pieces.xml',
         'views/templates.xml',
         'views/menu.xml',
         'security/ir.model.access.csv',

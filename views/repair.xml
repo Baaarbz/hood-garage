@@ -18,6 +18,7 @@
                 <tree string="Repair list">
                     <field name="name"/>
                     <field name="failure"/>
+                    <field name="total_price"/>
                     <field name="paid"/>
                 </tree>
             </field>
@@ -30,15 +31,20 @@
                 <form string="Repair form">
                     <sheet>
                         <group>
+                            <separator string="Repair information"/>
                             <group col="4" colspan="2">
                                 <field name="name"/>
                                 <field name="vehicle"/>
                                 <field name="failure"/>
                                 <field name="repair_date" readonly="1"/>
                             </group>
-                            <separator string="Costes reparación" colspan="2"/>
-                            <group colspan="1">
+                            <separator string="Repair cost"/>
+                            <group colspan="4">
                                 <field name="time_required"/>
+                                <field name="workforce_price"/>
+                                <field name="total_price" readonly="1"/>
+                                <field name="paid"/>
+                                <field name="pieces"/>
                             </group>
                         </group>
                     </sheet>

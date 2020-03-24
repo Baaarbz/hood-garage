@@ -1,0 +1,44 @@
+<odoo>
+    <data>
+        <record model="ir.actions.act_window" id="pieces_action">
+            <field name="name">Pieces</field>
+            <field name="res_model">garage.pieces</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">There are not used pieces</p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="pieces_form_view">
+            <field name="name">pieces.form</field>
+            <field name="model">garage.pieces</field>
+            <field name="arch" type="xml">
+                <form string="Pieces form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="provider"/>
+                            <field name="piece"/>
+                            <field name="unit"/>
+                            <field name="price"/>
+                            <field name="date" readonly="1"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="clubes_tree_view">
+            <field name="name">pieces.tree</field>
+            <field name="model">garage.pieces</field>
+            <field name="arch" type="xml">
+                <tree string="Pieces list">
+                    <field name="piece"/>
+                    <field name="unit"/>
+                    <field name="price"/>
+                </tree>
+            </field>
+        </record>
+    </data>
+</odoo>
