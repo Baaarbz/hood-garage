@@ -15,7 +15,7 @@
             <field name="name">repair.tree</field>
             <field name="model">garage.repair</field>
             <field name="arch" type="xml">
-                <tree string="Repair list">
+                <tree string="Repair list" decoration-success="paid == True" decoration-warning="paid == False">
                     <field name="name"/>
                     <field name="failure"/>
                     <field name="total_price"/>
@@ -62,6 +62,18 @@
                     <field name="repair_date"/>
                 </search>
             </field>
+        </record>
+
+        <record model="ir.filters" id="filter_paid">
+            <field name="name">Grouped by paid</field>
+            <field name="model_id">garage.repair</field>
+            <field name="context">{'group_by': ['paid']}</field>
+            <field name="is_default">true</field>
+            <field name="active">true</field>
+            <field name="sort">[]</field>
+            <field name="domain">[]</field>
+            <field name="user_id"></field>
+            <field name="action_id" eval="ref('repair_action')"/>
         </record>
 
     </data>
