@@ -70,6 +70,18 @@
             </field>
         </record>
 
+        <record model="ir.filters" id="filter_brand">
+            <field name="name">Grouped by brand</field>
+            <field name="model_id">garage.vehicle</field>
+            <field name="context">{'group_by': ['brand']}</field>
+            <field name="is_default">true</field>
+            <field name="active">true</field>
+            <field name="sort">[]</field>
+            <field name="domain">[]</field>
+            <field name="user_id"></field>
+            <field name="action_id" eval="ref('vehicles_action')"/>
+        </record>
+
         <record model="ir.filters" id="filter_electric">
             <field name="name">Grouped by electrics</field>
             <field name="model_id">garage.vehicle</field>
