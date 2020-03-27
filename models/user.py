@@ -7,7 +7,7 @@ from odoo.exceptions import ValidationError
 
 class User(models.Model):
     _name = 'garage.user'
-    _order = 'last_name desc'
+    _order = 'last_name asc'
     _sql_constraints = [
         ('unique_id_card', 'unique(id_card)', 'There are an user registered with the same ID Card.')]
 
@@ -22,12 +22,12 @@ class User(models.Model):
         letters_id_card = "TRWAGMYFPDXBNJZSQVHLCKE"
         letters_foreigner = "XYZ"
         replace_foreigner_letter = {'X': '0', 'Y': '1', 'Z': '2'}
-        regex = re.compile('[0-9]{8}[A-Z]')
+        regex = re.compile('[A-Z][0-9]{7}[A-Z]||[0-9]{8}[A-Z]')
 
         for user in self:
             temp_id_card = str(user.id_card)
-            if user.id_card[0] in letters_foreigner:
-                temp_id_card = temp_id_card.replace(user.id_card[0], replace_foreigner_letter[user.id_card[0]])
+            if temp_id_card[0] in letters_foreigner:
+                temp_id_card = temp_id_card.replace(temp_id_card[0], replace_foreigner_letter[temp_id_card[0]], 1)
 
             if not regex.match(temp_id_card):
                 raise ValidationError('Wrong ID Card, the format must be 00000000A.')
