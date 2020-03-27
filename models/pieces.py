@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields
 
 
-class Repair(models.Model):
+class Pieces(models.Model):
     _name = 'garage.pieces'
     _description = 'Pieces used to repair vehicles'
     _order = 'date desc'
