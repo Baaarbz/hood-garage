@@ -34,11 +34,11 @@ class Vehicle(models.Model):
     repairs = fields.One2many('garage.repair', 'vehicle')
 
     @api.constrains('numberplate')
-    def _constrain_registration(self):
+    def _constrain_numberplate(self):
         regex = re.compile('[0-9]{4}[A-Z]{3}')
         for vehicle in self:
             if not regex.match(vehicle.numberplate):
-                raise ValidationError('Wrong numberplate, el formato tiene que ser 0000AAA')
+                raise ValidationError('Wrong numberplate, the format must be 0000AAA')
 
     @api.constrains('registration_date')
     def _constrain_registration(self):
