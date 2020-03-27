@@ -9,37 +9,48 @@
         </field>
     </record>
 
+    <record model="ir.ui.view" id="mechanic_tree_view">
+        <field name="name">mechanic.tree</field>
+        <field name="model">garage.mechanic</field>
+        <field name="inherit_id" ref="user_tree_view"/>
+        <field name="arch" type="xml">
+                <field name="last_name"/>
+                <field name="name"/>
+                <field name="id_card"/>
+        </field>
+    </record>
+
     <record model="ir.ui.view" id="mechanic_form_view">
         <field name="name">mechanic.form</field>
         <field name="model">garage.mechanic</field>
         <field name="inherit_id" ref="user_form_view"/>
         <field name="arch" type="xml">
+            <xpath expr="//page[@id='personal_data']" position="inside">
+                <group>
+                    <field name="qualified"/>
+                </group>
+            </xpath>
             <xpath expr="//page[@id='personal_data']" position="after">
-                <page string="prueba">
+                <page string="Repairs record">
                     <group col="4" colspan="2">
-                        <field name="qualified"/>
                     </group>
                 </page>
             </xpath>
         </field>
     </record>
 
-    <record model="ir.ui.view" id="mechanic_tree_view">
-        <field name="name">mechanic.tree</field>
-        <field name="model">garage.mechanic</field>
-        <field name="arch" type="xml">
-            <tree string="Mechanic list">
-                <field name="last_name"/>
-                <field name="name"/>
-                <field name="id_card"/>
-            </tree>
-        </field>
+    <record model="ir.actions.act_window.view" id="select_view_tree_mechanic">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">tree</field>
+        <field name="view_id" ref="mechanic_tree_view"/>
+        <field name="act_window_id" ref="mechanic_action"/>
     </record>
 
-    <record model="ir.actions.act_window.view" id="select_view_mechanic">
+    <record model="ir.actions.act_window.view" id="select_view_form_mechanic">
         <field name="sequence" eval="1"/>
         <field name="view_mode">form</field>
         <field name="view_id" ref="mechanic_form_view"/>
         <field name="act_window_id" ref="mechanic_action"/>
     </record>
+
 </data>

@@ -1,4 +1,15 @@
 <data>
+
+    <record model="ir.actions.act_window" id="users_action">
+        <field name="name">Users</field>
+        <field name="res_model">garage.user</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">There are not registered users</p>
+        </field>
+    </record>
+
     <record model="ir.ui.view" id="user_form_view">
         <field name="name">user.form</field>
         <field name="model">garage.user</field>
@@ -10,7 +21,11 @@
                             <group col="4" colspan="2">
                                 <field name="name"/>
                                 <field name="last_name"/>
-                                <field name="id_card"/>
+                            </group>
+                            <group>
+                                <field name="id_card" class="oe_inline"/>
+                            </group>
+                            <group col="4" colspan="2">
                                 <field name="address"/>
                                 <field name="zip_code"/>
                             </group>
@@ -32,4 +47,5 @@
             </tree>
         </field>
     </record>
+
 </data>
