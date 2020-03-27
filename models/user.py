@@ -13,7 +13,6 @@ class User(models.Model):
 
     name = fields.Char(string='Name', required=True)
     last_name = fields.Char(string='Last name', required=True)
-    birth_date = fields.Date(string='Birth date')
     id_card = fields.Char(string='ID Card', help='Valid formats: 00000000A or A0000000A', required=True, size=9)
     address = fields.Char(string='Address', required=True)
     zip_code = fields.Integer(string='ZIP Code', size=5)

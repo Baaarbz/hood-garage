@@ -1,0 +1,35 @@
+<data>
+    <record model="ir.ui.view" id="user_form_view">
+        <field name="name">user.form</field>
+        <field name="model">garage.user</field>
+        <field name="arch" type="xml">
+            <form string="User form">
+                <sheet>
+                    <notebook>
+                        <page string="Personal data" id="personal_data">
+                            <group col="4" colspan="2">
+                                <field name="name"/>
+                                <field name="last_name"/>
+                                <field name="id_card"/>
+                                <field name="address"/>
+                                <field name="zip_code"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="user_tree_view">
+        <field name="name">user.tree</field>
+        <field name="model">garage.user</field>
+        <field name="arch" type="xml">
+            <tree string="User list">
+                <field name="last_name"/>
+                <field name="name"/>
+                <field name="id_card"/>
+            </tree>
+        </field>
+    </record>
+</data>
