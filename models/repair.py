@@ -5,7 +5,7 @@ from odoo import models, fields, api
 
 class Repair(models.Model):
     _name = 'garage.repair'
-    _description = 'History repairs'
+    _description = 'Repairs record'
     _order = 'repair_date asc'
 
     name = fields.Char(string='Repair code', compute='_repair_id', store=True)

@@ -46,7 +46,7 @@
                                         <field name="picture"/>
                                     </group>
                                 </page>
-                                <page string="Repairs history">
+                                <page string="Repairs record">
                                     <group>
                                         <field name="repairs"/>
                                     </group>
