@@ -35,4 +35,11 @@
             </tree>
         </field>
     </record>
+
+    <record model="ir.actions.act_window.view" id="select_view_mechanic">
+        <field name="sequence" eval="1"/>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="mechanic_form_view"/>
+        <field name="act_window_id" ref="mechanic_action"/>
+    </record>
 </data>
