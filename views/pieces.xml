@@ -29,7 +29,7 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="clubes_tree_view">
+        <record model="ir.ui.view" id="pieces_tree_view">
             <field name="name">pieces.tree</field>
             <field name="model">garage.pieces</field>
             <field name="arch" type="xml">
