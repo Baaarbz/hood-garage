@@ -2,3 +2,5 @@ id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
 garage_vehicle,garage.vehicle,model_garage_vehicle,base.group_user,1,1,1,1
 garage_repair,garage.repair,model_garage_repair,base.group_user,1,1,1,1
 garage_pieces,garage.pieces,model_garage_pieces,base.group_user,1,1,1,1
+garage_mechanic,garage.mechanic,model_garage_mechanic,base.group_user,1,1,1,1
+garage_user,garage.user,model_garage_user,base.group_user,1,1,1,1

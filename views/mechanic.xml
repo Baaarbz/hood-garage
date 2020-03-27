@@ -1,0 +1,43 @@
+ <data>
+        <record model="ir.actions.act_window" id="mechanic_action">
+            <field name="name">Mechanics</field>
+            <field name="res_model">garage.mechanic</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">There are not used pieces</p>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mechanic_form_view">
+            <field name="name">mechanic.form</field>
+            <field name="model">garage.mechanic</field>
+            <field name="arch" type="xml">
+                <form string="Mechanic form">
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                            <field name="last_name"/>
+                            <field name="birth_date"/>
+                            <field name="id_card"/>
+                            <field name="address"/>
+                            <field name="zip_code"/>
+                            <field name="qualified"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="mechanic_tree_view">
+            <field name="name">mechanic.tree</field>
+            <field name="model">garage.mechanic</field>
+            <field name="arch" type="xml">
+                <tree string="Mechanic list">
+                    <field name="last_name"/>
+                    <field name="name"/>
+                    <field name="id_card"/>
+                </tree>
+            </field>
+        </record>
+    </data>

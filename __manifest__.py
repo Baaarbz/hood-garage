@@ -26,6 +26,7 @@
         'views/vehicle.xml',
         'views/repair.xml',
         'views/pieces.xml',
+        'views/mechanic.xml',
         'views/templates.xml',
         'views/menu.xml',
         'security/ir.model.access.csv',
