@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "EduardoBarbosaTarrio",
+    'name': "HoodGarage",
 
     'summary': """
         Módulo para la asignatura de SXE.""",
